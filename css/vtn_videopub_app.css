@@ -1,0 +1,381 @@
+/* CSS Document */
+/*
+	* 
+	* VideoPub Wordpress Template - Applcation CSS  
+	* @author Ventuno Technologies.
+	* ver.1.0.0
+	* 
+*/
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Error Message
+:: Hearder
+:: Video List
+:: ThnkYou Message
+:: Dashboard Body
+:: Gallery Body
+:: Publish Pupup Box  
+:: Login
+:: Form
+:: Templates
+*/
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+.vtn_bg{ background-repeat:repeat; background-image:url( "../images/bg/bg_dark.gif" );  }
+
+.vtn_video_pub *, .vtn_video_pub *:before, .vtn_video_pub *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.vtn_video_pub{ font-family: 'Lato', sans-serif; font-weight: normal; font-style: normal; font-size: 14px; line-height: 1; color: #222222; }
+.vtn_video_pub.wrapper{ min-width:960px; max-width:1010px; padding:0px 43px;  position:relative;}
+.vtn_video_pub h2{ font-size:41px; font-weight:100; color:white;  }
+
+/*grid*/
+.vtn_video_pub .w100{ width:100%; }
+.vtn_video_pub .w60{ width:59%; margin-left:1%; margin-right:1%; }
+.vtn_video_pub .w50{ width:49%; margin-left:1%; margin-right:1%; }
+.vtn_video_pub .w40{ width:39%; margin-left:1%; margin-right:1%; }
+.vtn_video_pub .alpha{ margin-left:0; }
+.vtn_video_pub .omega{ margin-right:0; }
+
+.vtn_video_pub .s10{ width:10%; }
+.vtn_video_pub .s20{ width:20%; }
+.vtn_video_pub .s25{ width:25%; }
+.vtn_video_pub .s30{ width:30%; }
+.vtn_video_pub .s35{ width:35%; }
+.vtn_video_pub .s40{ width:40%; }
+.vtn_video_pub .s85{ width:85%; }
+
+/* floater */
+.vtn_video_pub .floater.left{ display:block; float:left; }
+.vtn_video_pub .floater.right{ display:block; float:right; }
+
+/*shadow_box*/
+.vtn_video_pub .vtn_shadow_box{ margin-bottom: 15px; position:relative; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; -moz-box-shadow: 1px 1px 0px 0px rgba(10, 10, 10, 0.25); -webkit-box-shadow: 1px 1px 0px 0px rgba(10, 10, 10, 0.25); box-shadow: 1px 1px 0px 0px rgba(10, 10, 10, 0.25); }
+
+/*shadow_box*/
+.vtn_video_pub .vtn_rounded_box{ position:relative; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }
+
+/*content_box*/
+.vtn_video_pub .vtn_content_box{ background-color:white; padding:2px 2px;  overflow:hidden; }
+.vtn_video_pub .added_padding{ padding:10px 10px;}
+.vtn_video_pub .vtn_content_box.added_bottom_margin{ margin-bottom:10px;}
+.vtn_video_pub .vtn_content_box.gray{ background-color:#94958f; }
+.vtn_video_pub .vtn_content_box.ivory{ background-color:#fcfbf8; }
+.vtn_video_pub .vtn_content_box h3 { display:block; width:100%; height:25px; color:white; margin:0; padding:4px 0 0 7px; position:relative;
+font-size:16px; font-weight:400; text-transform:uppercase; 
+background:#3f403e url("../images/gray_grad.gif") repeat-x; }
+/*.vtn_video_pub .vtn_content_box.vtn_expandable h3 span{ display:block; position:absolute; top:6px; right:7px; width:10px; height:12px; background-repeat:no-repeat; background-image:url("../images/h3_arrow.gif");  }
+.vtn_video_pub .vtn_content_box.vtn_expandable.up h3{ height:25px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; cursor:pointer; }
+.vtn_video_pub .vtn_content_box.vtn_expandable.down h3{ height:26px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; cursor:pointer; }
+.vtn_video_pub .vtn_content_box.vtn_expandable.up h3 span{ background-position: 0px 0px; }
+.vtn_video_pub .vtn_content_box.vtn_expandable.down h3 span{ background-position: 0px -12px; }	
+*/
+.vtn_video_pub .vtn_content_box h3 .added_msg { font-size:11px; color:#c1c2c1; }
+.vtn_video_pub .vtn_content_box.vtn_expandable h3 span.down_arrow{ display:block; position:absolute; top:6px; right:7px; width:10px; height:12px; background-repeat:no-repeat; background-image:url("../images/h3_arrow.gif");  }
+.vtn_video_pub .vtn_content_box.vtn_expandable.up h3{ height:25px; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; cursor:pointer; }
+.vtn_video_pub .vtn_content_box.vtn_expandable.down h3{ height:26px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; cursor:pointer; }
+.vtn_video_pub .vtn_content_box.vtn_expandable.up h3 span.down_arrow{ background-position: 0px 0px; }
+.vtn_video_pub .vtn_content_box.vtn_expandable.down h3 span.down_arrow{ background-position: 0px -12px; }
+
+/*content_box vtn_content_inner*/
+.vtn_video_pub .vtn_content_box .vtn_content_inner{ width:100%; min-height:100px; overflow:hidden; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;  }
+.vtn_video_pub .vtn_content_inner{ background-color:white; }
+.vtn_video_pub .vtn_content_inner.ivory{ background-color:#fcfbf8; }
+.vtn_video_pub .vtn_content_inner.gray{ background: #94958f url("../images/graybox_grad.gif") bottom repeat-x; }
+
+/*content_box inner_padded*/
+.vtn_video_pub .vtn_content_box .inner_padded{ width:100%; padding:18px 8px 0px 10px; }
+.vtn_video_pub .vtn_content_box .padded_top{ padding-top:4px; }
+
+/* clearfix solution */
+.vtn_video_pub .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.vtn_video_pub .clearfix { display: inline-block; }
+html[xmlns] .vtn_video_pub .clearfix { display: block; }
+* html .vtn_video_pub .clearfix { height: 1%; }
+
+/* Links ---------------------- */
+.vtn_video_pub a:hover, .vtn_video_pub a:active, .vtn_video_pub a{ text-decoration: none; color:white; }
+.vtn_video_pub a img { border: none; }
+
+/* Stats Circle ---------------------- */
+.vtn_video_pub .stats_circle { display:block; width: 95px; height: 95px; -moz-border-radius: 50%; -webkit-border-radius:50%; border-radius: 50%; background-color: black; }
+.vtn_video_pub .vtn_center { margin:0 auto; }
+
+/* Vtn Action Button ---------------------- */
+.vtn_video_pub .vtn_btn, .vtn_video_pub .vtn_action_btn{ border:none; margin:0px; height:23px; padding:0px 13px 1px; margin-left:8px; text-transform:uppercase; font-weight:400; color:white; background-color:#b42828;
+-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+@-moz-document url-prefix() {
+	.vtn_video_pub .vtn_btn, .vtn_video_pub .vtn_action_btn{ padding:0px 13px 2px;}
+} 
+.vtn_video_pub a.vtn_btn, .vtn_video_pub a.vtn_action_btn{ padding:4px 13px; }
+ .vtn_video_pub .vtn_action_btn, .vtn_video_pub a.vtn_action_btn{ padding:4px 34px 0px 13px; background:#b42828 url("../images/white_button_arrow.gif") no-repeat; background-position: center right; }
+.vtn_video_pub .vtn_btn:hover, .vtn_video_pub .vtn_btn:active, .vtn_video_pub .vtn_action_btn:hover, .vtn_video_pub .vtn_action_btn:active{ background-color:#2f99d5; }
+
+.vtn_video_pub .vtn_btn.gray, .vtn_video_pub .vtn_action_btn.gray{ background-color:#797979; }
+.vtn_video_pub .vtn_btn.gray:hover,.vtn_video_pub .vtn_btn.gray:active, .vtn_video_pub .vtn_action_btn.gray:hover,.vtn_video_pub .vtn_action_btn.gray:active{ background-color:#b42828; } 
+
+/* holder div */
+.vtn_video_pub .vtn_holder { height:37px; padding:12px 10px; }
+.vtn_video_pub .bottom_border{ border-bottom: #d4d5d2 1px dotted; }
+.vtn_video_pub .right_border{ border-right: #B4B4B4 1px dotted; }
+
+/* pagnation */
+.vtn_video_pub .vtn_pagnation { height:16px; padding-right:16px; text-transform:uppercase; }
+
+.vtn_video_pub .vtn_pagnation .simple-pagination{ display: block; overflow: visible; padding: 0; margin: 0; }
+.vtn_video_pub .vtn_pagnation ul, .vtn_video_pub .vtn_pagnation ul li{ list-style-type: none; padding:0px; margin:0px }
+.vtn_video_pub .vtn_pagnation ul li{ display:block; float:left; height:16px; padding:2px 4px; margin-left:6px; font-size:11px; color:white; background-color:#60605f;  }
+.vtn_video_pub .vtn_pagnation ul li:hover, .vtn_video_pub .vtn_pagnation ul li:active { color:white; background-color:#b42828; }
+.vtn_video_pub .vtn_pagnation ul li.active, .vtn_video_pub .vtn_pagnation ul li.active:hover, .vtn_video_pub .vtn_pagnation ul li.active:active  { color:#454545; background-color:#9f9fa0; }
+
+.vtn_video_pub .vtn_pagnation ul li span, .vtn_video_pub .vtn_pagnation ul li a{
+float: left;
+color:white;
+font-size: 11px;
+line-height: 1;
+font-weight: normal;
+text-align: center;
+border: none;
+min-width: 6px;
+padding: 0;
+margin: 0;
+border-radius: 0;
+box-shadow: none;
+background: none;
+}
+.vtn_video_pub .vtn_pagnation ul li.active span { color:#454545; }
+
+/* -----------------------------------------
+   Error Message
+----------------------------------------- */
+.vtn_video_pub .error_message{ display:block; width:95%; padding:0px 4px ; margin:2px auto; font-size:15px; font-weight:400; color:#b42828; text-align:center; line-height:1; } 
+.vtn_video_pub .error_message.white{ color:white; } 
+.vtn_video_pub .error_message.yellow{ color:#f2ac3b; } 
+.vtn_video_pub .error_message.blue{ color:#1d8ecd; } 
+.vtn_video_pub .error_message.dark_blue{ color:#27617c; } 
+
+.vtn_video_pub .error_message.block{ padding:7px 18px ; margin:10px auto 2px; background-color:#9b9c96; 
+font-size:19px; font-weight:400; color:#454545; text-align:center; line-height:1.2;
+-moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px;
+} 
+.vtn_video_pub .error_message.block.white{ background-color:white; color:#454545; } 
+.vtn_video_pub .error_message.block.dark{ background-color:#454545; color:white; } 
+.vtn_video_pub .error_message.block.yellow{ background-color:#f2ac3b; color:white; } 
+
+
+/* -----------------------------------------
+   Video List
+----------------------------------------- */
+/* pagnation */
+.vtn_video_pub .vtn_content_box.vtn_videos_list_box .vtn_pagnation {  height:25px; margin-top:9px; }
+
+
+/* Video List Box */
+.vtn_video_pub .vtn_content_box.vtn_videos_list_box { height:auto; overflow: visible; }
+.vtn_video_pub .vtn_content_box.vtn_videos_list_box .vtn_content_inner { height: auto; }
+.vtn_video_pub .vtn_content_box.vtn_videos_list_box .vid_thumb_wrapper { margin-bottom:10px; }
+.vtn_video_pub .vtn_content_box.vtn_videos_list_box .vtn_action_btn { margin-right: 10px; }
+
+/* vid_thumb_item ---------------------- */
+.vtn_video_pub .vid_thumb_item{ width:100%; height:104px; padding:8px 17px 0px 16px; border-bottom: #d4d5d2 1px dotted; position:relative;}
+.vtn_video_pub .vid_thumb_item img{ width:120px; height:90px; margin-right:18px }
+.vtn_video_pub .vid_thumb_item h4{ margin:0 0 10px; padding:0px; font-size:18px; font-weight:700; color:#fcfbf8; }
+.vtn_video_pub .vid_thumb_item p{ margin:0 0 5px; padding:0px; font-size:14px; font-weight:400; color:#444444; line-height:1.3 }
+.vtn_video_pub .vid_thumb_item p span.more{ background-color:#797979; color:white; font-size:12px; padding:1px 5px; -moz-border-radius:2px; -webkit-border-radius:2px; border-radius:2px; }
+.vtn_video_pub .vid_thumb_item p span.more:hover, .vtn_video_pub .vid_thumb_item p span.more:active{ background-color:#b42828; }
+.vtn_video_pub .vid_thumb_item .vid_details_item{ display:block; position:absolute; height:11px; bottom: 5px; padding:0px 5px 0px 15px; color:#50504e; font-size:11px; font-weight:400; background-repeat:no-repeat;}
+.vtn_video_pub .vid_thumb_item .vid_details_item.right_border{ border-right: #595959 1px dotted; }
+.vtn_video_pub .vid_thumb_item a.vid_details_item { background-position:0 0; text-transform:uppercase; }
+.vtn_video_pub .vid_thumb_item a.vid_details_item:hover,.vtn_video_pub .vid_thumb_item a.vid_details_item:active { background-position:0 -11; color:#df2c2b; }
+.vtn_video_pub .vid_thumb_item .vid_date{  left: 154px; background-image:url( "../images/date_icon.png" ); }
+.vtn_video_pub .vid_thumb_item .vid_time{ left: 224px; background-image:url( "../images/time_icon.png" ); }
+.vtn_video_pub .vid_thumb_item .vid_preview{ right: 80px; background-image:url( "../images/preview_icon.gif" ); }
+.vtn_video_pub .vid_thumb_item .vid_publish{ right: 10px; color:white; background-image:url( "../images/publish_icon.gif" ); }
+
+/* -----------------------------------------
+   Hearder
+----------------------------------------- */
+.vtn_video_pub .vtn_header{ display:block; height:32px; margin: 10px 0px; }
+
+.vtn_video_pub .vtn_logo{ display:block; height:32px; width:129px; background-repeat:repeat; background-image:url( "../images/bg/bg_dark.gif" );  }
+
+.vtn_video_pub  .vtn_title_bar{ display:block; height:51px; background-repeat:repeat; background-image:url( "../images/bg/ivory_36.png" ); background: rgba(252,251,248,0.36);  }
+
+.vtn_video_pub  .vtn_title_bar h2{ display:block; margin:0px; padding:3px 0px 0px 14px; letter-spacing:-1px; }
+.vtn_video_pub  .vtn_title_bar h2 span{ font-weight:400; }
+
+.vtn_video_pub  .vtn_acc_sec{ display:block; padding:17px 14px 0px 0px; min-width:10px; min-height:10px; color:white; font-size:16px; font-weight:300;}
+
+.vtn_video_pub  .vtn_acc_status #status{ color:#f0a10a; }
+
+.vtn_video_pub  .vtn_acc_sec a{ display:block; margin-left:8px; padding:4px 30px 0px 11px; height:21px;  overflow:hidden; position:relative; top:-3px;
+font-size:12px; font-weight:400; color:#32332f; 
+background:white url("../images/button_arrow.gif") no-repeat; background-position: right 0px;
+-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 1px 1px 0px 0px rgba(100, 100, 100, 0.5); -webkit-box-shadow: 1px 1px 0px 0px rgba(100, 100, 100, 0.5); box-shadow: 1px 1px 0px 0px rgba(100, 100, 100, 0.5);  } 
+.vtn_video_pub  .vtn_acc_sec a:hover, .vtn_video_pub  .vtn_acc_sec a:active{ background-position: right -21px; color:#f0a10a; background-color:#919191; }
+
+/* -----------------------------------------
+   ThnkYou Message
+----------------------------------------- */
+
+
+.vtn_video_pub .vtn_thnkyou_sec{ display:block; height:32px; background-color:#fcfbf8; padding:2px 0 2px 3px; }
+.vtn_video_pub .vtn_thnkyou_sec #thnkyou_message{ height:27px; color:white; font-size:16px; font-weight:300; padding: 5px 10px 0;
+background-color:#296481;
+-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.vtn_video_pub .vtn_thnkyou_sec #thnkyou_message span.pub_style{ font-weight:400; }
+.vtn_video_pub .vtn_thnkyou_sec #thnkyou_message span.vid_style{ font-weight:100; }
+
+.vtn_video_pub .vtn_thnkyou_sec #action_message{ height:27px; color:#464646; font-size:14px; font-weight:300; margin-left:140px; padding-top:7px; }
+.vtn_video_pub .vtn_thnkyou_sec a{ position:relative; top:2px; }
+
+ /* -----------------------------------------
+	Dashboard Body
+----------------------------------------- */
+
+/*VideoPub About*/
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box { height:262px; }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about{ padding:4px 8px; }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about h4,.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about p{ margin:0; padding:0; }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about h4{ font-size:41px; font-weight:300; color:#4f4f4f; margin-bottom:5px }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about h4 span{ font-weight:700; color:#7fa547;  }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about p{ font-size:14px; font-weight:400; color:#4f4f4f; line-height:1.2; margin-bottom:17px }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about div{ width:100%; height:70px; padding:11px 0 0 10px; background-color:#296481; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about div img{ margin-right:34px; }
+.vtn_video_pub .vtn_content_box.vtn_videopub_about_box   #videopub_about div p{ width:300px; color:white; font-size:14px; font-weight:400; }
+
+/*Stats*/
+.vtn_video_pub .vtn_content_box.vtn_stats_box { height:262px;  }
+.vtn_video_pub .vtn_content_box.vtn_stats_box .vtn_content_inner { height:256px;  }
+
+.vtn_video_pub .vtn_content_box.vtn_stats_box .inner_padded .figure_holder{ width:48%; height:140px; margin:0 1% 5px; text-align:center; margin-bottom: 18px; }
+.vtn_video_pub .vtn_content_box.vtn_stats_box .stats_figure_circle{ font-size:19px; font-weight:700; color:white; padding-top:35px; text-align:center; margin-bottom: 8px; }
+.vtn_video_pub .vtn_content_box.vtn_stats_box .stats_sub_text{ font-size:12px; }
+.vtn_video_pub .vtn_content_box.vtn_stats_box .stats_figure_text{ font-size:18px; font-weight:300; color:white; }
+.vtn_video_pub .vtn_content_box.vtn_stats_box #vid_views{ background-color:#27617c; }
+.vtn_video_pub .vtn_content_box.vtn_stats_box #ad_imp{ background-color:#f1a934; }
+.vtn_video_pub .vtn_content_box.vtn_stats_box #ad_rev{ background-color:#99ae66; }
+
+.vtn_video_pub .vtn_content_box.vtn_stats_box .stats_date_holder{ font-size:14px; font-weight:400; color:#4f4f4f; padding-top:20px }
+.vtn_video_pub .vtn_content_box.vtn_stats_box .stats_date_holder span{ display:block; }
+.vtn_video_pub .vtn_content_box.vtn_stats_box .stats_date_holder #stats_week{ font-size:18px; font-weight:400; }
+
+.vtn_video_pub .vtn_content_box.vtn_stats_box a{ position:relative; top:23px; }
+
+/*Latest Vids*/
+.vtn_video_pub .vtn_content_box.vtn_latest_box { height:383px; }
+.vtn_video_pub .vtn_content_box.vtn_latest_box .vtn_content_inner { height: 378px;}
+
+/*Ventuno About*/
+.vtn_video_pub .vtn_content_box.vtn_ventuno_about_box { height:383px; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_about_box .vtn_content_inner { height: 378px;}
+.vtn_video_pub .vtn_content_box.vtn_ventuno_about_box img { margin-bottom: 15px; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_about_box h4 { width:200px; margin:0 0 10px; font-size:42px; font-weight:300; color:#3c9dd3; line-height:0.85; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_about_box p{ margin:0 0 33px; padding-right:40px; font-size:19px; font-weight:400; color:#404140; line-height:1; }
+
+/*FAQs*/
+.vtn_video_pub .vtn_content_box.vtn_ventuno_faq_box { height:383px; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_faq_box .vtn_content_inner { height: 378px; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_faq_box .vtn_content_inner .inner_padded { height: 350px; overflow-y:scroll; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_faq_box p { width:100%; margin:0px; padding:0; font-size:14px; font-weight:400; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_faq_box p.question { margin-bottom:15px; color:white; }
+.vtn_video_pub .vtn_content_box.vtn_ventuno_faq_box p.answer { margin-bottom:21px; color:#2e2e2e; }
+
+ /* -----------------------------------------
+	Gallery Body
+----------------------------------------- */
+
+/*Video list Box*/
+.vtn_video_pub .vtn_content_box.vtn_videos_list_box.vtn_gallery { height:auto;  }
+.vtn_video_pub .vtn_content_box.vtn_videos_list_box.vtn_gallery .vtn_content_inner { height:auto; }
+
+ /* -----------------------------------------
+	Publish Pupup Box  
+----------------------------------------- */
+.vtn_video_pub .vtn_content_box.vtn_publish_popup .vtn_form_box .vtn_content_inner{ height:auto; padding-bottom:0px }
+.vtn_video_pub .vtn_content_box.vtn_publish_popup .vtn_gallery { height:450px; }
+.vtn_video_pub .vtn_content_box.vtn_publish_popup .vtn_gallery .vtn_content_inner{ height:445px; }
+.vtn_video_pub .vtn_content_box.vtn_publish_popup .vtn_gallery .vtn_scroll_y_wrapper{ height:418px; overflow-y:scroll; }
+
+ /* -----------------------------------------
+	Login
+----------------------------------------- */
+
+.vtn_video_pub .vtn_content_box.vtn_login{ height:auto; }
+.vtn_video_pub .vtn_content_box.vtn_login .vtn_content_inner { height:auto;}
+.vtn_video_pub .vtn_content_box.vtn_login .inner_padded{ padding-left:18px; }
+.vtn_video_pub .vtn_content_box.vtn_login .choose_form{ color:white; margin-bottom:13px; }
+.vtn_video_pub .vtn_content_box.vtn_login .choose_form div{ margin-bottom:6px; }
+.vtn_video_pub .vtn_content_box.vtn_login .choose_form input{ margin-right:8px; }
+.vtn_video_pub .vtn_content_box.vtn_login .vtn_form_box { margin-bottom:20px; }
+
+ /* -----------------------------------------
+	Templates
+----------------------------------------- */
+
+.vtn_video_pub .vtn_content_box.vtn_template_outer{ height:auto; }
+.vtn_video_pub .vtn_content_box.vtn_template_outer .vtn_content_inner { height:auto;}
+.vtn_video_pub .vtn_content_box.vtn_template_inner { height: auto;}
+
+.vtn_video_pub .vtn_content_box.vtn_template_inner .template_item{ position:relative; height:87px; padding:8px 0px; border-bottom: #d4d5d2 1px dotted; }
+.vtn_video_pub .vtn_content_box.vtn_template_inner .template_item div{ height:100%; min-width:10px; }
+
+/* template item */
+.vtn_video_pub .template_item  h4{ margin:0 0 2px; padding:0px; font-size:18px; font-weight:700; color:#fcfbf8; }
+.vtn_video_pub .template_item p{ margin:0; padding:0px; font-size:11px; font-weight:400; color:#444444; word-wrap: break-word; }
+.vtn_video_pub .template_item .font_light{ color:#eeeeee; }
+.vtn_video_pub .template_item .template_title{ padding:0px 14px 0 10px; }
+.vtn_video_pub .template_item .template_categories{ padding:0 14px } 
+.vtn_video_pub .template_item .template_details{ padding:0 0 0 17px; }
+.vtn_video_pub .template_item .template_details .margin_right{ margin-right:10px; }
+.vtn_video_pub .template_item .template_details p,.vtn_video_pub .template_item .template_categories p{ font-size:11px; line-height:1.7; }
+.vtn_video_pub .template_item .template_details p span{ display:block; height:13px; width:13px; margin: 2px 0 5px; }
+
+.vtn_video_pub .template_item .template_details_item{ display:block; position:absolute; height:11px; bottom: 9px; padding:0px 5px 0px 15px; color:#50504e; font-size:11px; font-weight:400; background-repeat:no-repeat;}
+.vtn_video_pub .template_item a.template_details_item { background-position:0 0; text-transform:uppercase; }
+.vtn_video_pub .template_item a.template_details_item:hover,.vtn_video_pub .template_item a.vid_details_item:active { background-position:0 -11; color:#df2c2b; }
+.vtn_video_pub .template_item .vid_edit{ right: 77px; background-image:url( "../images/edit_icon.png" ); }
+.vtn_video_pub .template_item .vid_publish{ right: 7px; color:white; background-image:url( "../images/publish_icon.gif" ); }
+
+/* pagnation */
+.vtn_video_pub .vtn_content_box.vtn_template_inner .vtn_pagnation {  height:25px; margin-top:9px; }
+
+
+
+ /* -----------------------------------------
+	Form
+----------------------------------------- */
+
+/*From Box*/
+.vtn_video_pub .vtn_content_box.vtn_form_box { height:auto; }
+.vtn_video_pub .vtn_content_box.vtn_form_box .vtn_content_inner{ height:auto; padding-bottom:5px }
+.vtn_video_pub .vtn_content_box.vtn_form_box .labels{ width:183px; min-height:34px; padding-top:5px; }
+.vtn_video_pub .vtn_content_box.vtn_form_box .elements { min-height:24px; margin-bottom:22px; }
+.vtn_video_pub .vtn_content_box.vtn_form_box .elements.with_instruct { margin-bottom:13px; }
+.vtn_video_pub .vtn_content_box.vtn_form_box .elements.bottom { margin-bottom:3px; }
+.vtn_video_pub .vtn_content_box.vtn_form_box span.instruction_text { display:block; font-size:12px; color:#8b8b8b; }
+.vtn_video_pub .vtn_content_box.vtn_form_box span.instruction_text.blue, .vtn_video_pub .vtn_content_box.vtn_form_box span.instruction_text.blue a { font-size:13px; color:#3a8db6; }
+.vtn_video_pub .vtn_content_box.vtn_form_box span.instruction_text.blue:hover, .vtn_video_pub .vtn_content_box.vtn_form_box span.instruction_text.blue a:hover, .vtn_video_pub .vtn_content_box.vtn_form_box span.instruction_text.blue:active, .vtn_video_pub .vtn_content_box.vtn_form_box span.instruction_text.blue a:active { font-size:13px; color:#df6428; }
+
+/* form */
+.vtn_video_pub form{ font-family: 'Lato', sans-serif; font-weight: normal; font-style: normal; font-size: 14px; line-height: 1; color: #2e2e2e; }
+.vtn_video_pub input[type="text"],.vtn_video_pub input[type="password"],.vtn_video_pub textarea, .vtn_video_pub select { width: 346px; font-family: 'Lato', sans-serif; font-weight: normal; font-style: normal; font-size: 14px; line-height: 1; color: #2e2e2e; background-color: white; padding: 1px 5px; overflow: hidden; border-width: 1px; border-color:444443; border-radius: 0;}
+.vtn_video_pub input[type="text"],.vtn_video_pub input[type="password"],.vtn_video_pub select { width: 346px; font-family: 'Lato', sans-serif; font-weight: normal; font-style: normal; font-size: 14px; line-height: 1; color: #2e2e2e; background-color: white; padding: 1px 5px; overflow: hidden; border-width: 1px; border-color:444443; border-radius: 0; height: 24px; }
+.vtn_video_pub input[type="radio"], .vtn_video_pub input[type="checkbox"]{ margin: 3px 3px 0px 5px; }
+
+@-moz-document url-prefix() {
+	.vtn_video_pub .select_moz{ width: 210px; display:inline-block; padding: 0;	overflow: hidden; background:url('../images/drop_down.gif') no-repeat right; 
+	border:1px solid #444443; height: 24px; }
+	.select_moz select { background: none; border:0; height: 24px; width: 230px; overflow:hidden; }
+} 
+
+
+
+
+
+
